@@ -1,0 +1,214 @@
+/* Custom CSS for Artizo E-commerce */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Product Card Hover Effect */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Card Hover Effect */
+.category-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+}
+
+.category-card:hover::after {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.category-card h3 {
+    position: relative;
+    z-index: 10;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #000;
+    border-color: #000;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn-outline {
+    border: 1px solid #000;
+    color: #000;
+}
+
+.btn-outline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Product Detail Page */
+.product-gallery img {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.product-gallery img:hover {
+    opacity: 0.8;
+}
+
+.size-option {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.size-option:hover, .size-option.active {
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+}
+
+.color-option {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.color-option:hover, .color-option.active {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #000;
+}
+
+/* Quantity Input */
+.quantity-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quantity-input button {
+    background: #f5f5f5;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quantity-input input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+/* Rating Stars */
+.rating {
+    color: #ffc107;
+}
+
+/* Checkout Steps */
+.checkout-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.checkout-step {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
+
+.checkout-step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: #ddd;
+    transform: translateY(-50%);
+}
+
+.checkout-step:last-child::after {
+    display: none;
+}
+
+.checkout-step.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.checkout-step.active::after {
+    background-color: #000;
+}
+
+/* Admin Dashboard */
+.admin-sidebar {
+    background-color: #343a40;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.admin-sidebar a {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    display: block;
+}
+
+.admin-sidebar a:hover, .admin-sidebar a.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .checkout-steps {
+        flex-direction: column;
+    }
+    
+    .checkout-step::after {
+        display: none;
+    }
+} 
